@@ -39,7 +39,6 @@ int operatorselection() // selects the operator
             break;
         default:
             cout << "invalid selecton" << endl;
-            cont = 1;
             break;
         }
     } while (cont == 1);
@@ -68,7 +67,7 @@ double userguess(double num1, double num2, int op)// recives the users guess
     return awnser;
 }
 
-bool validaton(double num1, double num2, double userg, int op)
+bool validaton(double num1, double num2, double userg, int op) // validates that the enterd number is correct
 {
     double correct;
     switch (op)
@@ -86,6 +85,7 @@ bool validaton(double num1, double num2, double userg, int op)
         correct = num1 / num2;
         break;
     }
+
     if (correct == userg)
     {
         return 1;
